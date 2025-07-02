@@ -9,16 +9,17 @@
     "baseUrl": ".",
     "declaration": true,
     "outDir": "./dist",
+    "rootDir": "./src",
     "lib": ["ES2019"],
-    "skipDefaultLibCheck": true,
-    
+    "skipDefaultLibCheck": true
   },
-  "include": ["./"],
+  "include": ["./src"],
   "exclude": [
     "node_modules",
     "samples",
     "tests",
     "dist",
     "coverage",
+    ".github"
   ]
 }

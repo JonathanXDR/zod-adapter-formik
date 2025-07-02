@@ -7,3 +7,4 @@ tests
 jest.config.ts
 tsconfig.json
 bun.lock
+.github
