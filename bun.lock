@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "zod-formik-adapter",
+      "name": "zod-adapter-formik",
       "devDependencies": {
         "@types/jest": "30.0.0",
         "formik": "2.4.6",
