@@ -1,5 +1,7 @@
 import { Formik } from 'formik'
 import React from 'react'
+// TODO: Remove this after initial release
+// @ts-ignore
 import { toFormikValidationSchema } from 'zod-adapter-formik/v4'
 import * as z from 'zod/v4'
 
