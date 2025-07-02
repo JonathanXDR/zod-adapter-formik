@@ -8,7 +8,7 @@
         "react": "19.1.0",
         "react-dom": "19.1.0",
         "zod": "3.25.67",
-        "zod-formik-adapter": "1.3.0",
+        "zod-adapter-formik": "1.4.0",
       },
       "devDependencies": {
         "@types/react-dom": "19.1.6",
@@ -53,6 +53,6 @@
 
     "zod": ["zod@3.25.67", "", {}, "sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw=="],
 
-    "zod-formik-adapter": ["zod-formik-adapter@1.3.0", "", { "peerDependencies": { "formik": "^2.2.9", "zod": "^3.22.4" } }, "sha512-qWsVwRYqpRod5BL35pRXHD6UOugiyaEyLPO04rCN/uKTCFCR+VElPEG26+3wNrxGP7y5XmJM+4/0MrABnRYZrw=="],
+    "zod-adapter-formik": ["zod-adapter-formik@1.4.0", "", { "peerDependencies": { "formik": "^2.2.9", "zod": "^3.22.4" } }, "sha512-qWsVwRYqpRod5BL35pRXHD6UOugiyaEyLPO04rCN/uKTCFCR+VElPEG26+3wNrxGP7y5XmJM+4/0MrABnRYZrw=="],
   }
 }
