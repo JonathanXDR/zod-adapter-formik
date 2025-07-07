@@ -1,6 +1,6 @@
 {
   "name": "zod-adapter-formik",
-  "version": "1.4.9",
+  "version": "1.4.10",
   "description": "An adapter of zod object validation to Formik validation schema",
   "main": "./dist/index.js",
   "exports": {
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/JonathanXDR/zod-adapter-formik.git"
   },
   "scripts": {
-    "build": "tsc --jsx react",
+    "build": "bunx tsc --jsx react",
     "test": "jest --coverage",
     "test:ci": "jest --ci --coverage",
     "build:clean": "rm -rf dist && bun run build"
