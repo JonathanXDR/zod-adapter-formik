@@ -7,8 +7,8 @@
         "formik": "2.4.6",
         "react": "19.1.0",
         "react-dom": "19.1.0",
-        "zod": "3.25.71",
-        "zod-adapter-formik": "1.4.2",
+        "zod": "3.25.74",
+        "zod-adapter-formik": "1.4.4",
       },
       "devDependencies": {
         "@types/react-dom": "19.1.6",
@@ -51,8 +51,8 @@
 
     "typescript": ["typescript@5.8.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="],
 
-    "zod": ["zod@3.25.71", "", {}, "sha512-BsBc/NPk7h8WsUWYWYL+BajcJPY8YhjelaWu2NMLuzgraKAz4Lb4/6K11g9jpuDetjMiqhZ6YaexFLOC0Ogi3Q=="],
+    "zod": ["zod@3.25.74", "", {}, "sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg=="],
 
-    "zod-adapter-formik": ["zod-adapter-formik@1.4.2", "", { "peerDependencies": { "formik": "2.2.9", "zod": "3.22.4" } }, "sha512-kSQtRkSWRJMwhvjuap6pQRIDh/ThpJLT2KLmyR+IQtlJ9z9hNzwHogc8aH2fuA+YjFovQRGJEaqNRHItjvQSAg=="],
+    "zod-adapter-formik": ["zod-adapter-formik@1.4.4", "", { "peerDependencies": { "formik": "^2.2.9", "zod": "^3.22.4" } }, "sha512-nNMRLFPyrVfsvmhiNp6OByEjbJNaHNVoEMMqflvIBgww3zbIge6am5SU6UdCQZ8KGu44FMg8+E3PF5uYOvQ+4g=="],
   }
 }

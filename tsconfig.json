@@ -21,5 +21,17 @@
     "dist",
     "coverage",
     ".github"
-  ]
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./v4": {
+      "import": "./dist/v4/index.js",
+      "require": "./dist/v4/index.js",
+      "types": "./dist/v4/index.d.ts"
+    }
+  },
 }
