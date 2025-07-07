@@ -15,7 +15,7 @@ function createValidationError(e: z.ZodError) {
   const error = new ValidationError(e.message)
   error.inner = e.issues.map((err) => ({
     message: err.message,
-    path: err.path.join('.'),
+    path: err.path.map((key) => String(key)).join('.'),
   }))
 
   return error

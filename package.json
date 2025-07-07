@@ -1,8 +1,12 @@
 {
   "name": "zod-adapter-formik",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "An adapter of zod object validation to Formik validation schema",
   "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./v4": "./dist/v4/index.js"
+  },
   "author": "Matheus Robert Lichtnow <matheusrobert8@gmail.com>",
   "contributors": [
     "Jonathan Russ <jonathan.russ@bluewin.ch>"

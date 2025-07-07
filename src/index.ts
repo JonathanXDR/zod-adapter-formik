@@ -1,23 +1,23 @@
-import { z } from "zod";
+import { z } from 'zod'
 
 export class ValidationError extends Error {
-  public name = "ValidationError";
+  public name = 'ValidationError'
 
-  public inner: Array<{ path: string; message: string }> = [];
+  public inner: Array<{ path: string; message: string }> = []
 
   public constructor(message: string) {
-    super(message);
+    super(message)
   }
 }
 
 function createValidationError(e: z.ZodError) {
-  const error = new ValidationError(e.message);
+  const error = new ValidationError(e.message)
   error.inner = e.errors.map((err) => ({
     message: err.message,
-    path: err.path.join("."),
-  }));
+    path: err.path.join('.'),
+  }))
 
-  return error;
+  return error
 }
 
 /**
@@ -27,27 +27,27 @@ function createValidationError(e: z.ZodError) {
  */
 export function toFormikValidationSchema<T>(
   schema: z.ZodSchema<T>,
-  params?: Partial<z.ParseParams>,
+  params?: Partial<z.ParseParams>
 ): { validate: (obj: T) => Promise<void> } {
   return {
     async validate(obj: T) {
       try {
-        await schema.parseAsync(obj, params);
+        await schema.parseAsync(obj, params)
       } catch (err: unknown) {
-        throw createValidationError(err as z.ZodError<T>);
+        throw createValidationError(err as z.ZodError<T>)
       }
     },
-  };
+  }
 }
 
 function createValidationResult(error: z.ZodError) {
-  const result: Record<string, string> = {};
+  const result: Record<string, string> = {}
 
   for (const x of error.errors) {
-    result[x.path.filter(Boolean).join(".")] = x.message;
+    result[x.path.filter(Boolean).join('.')] = x.message
   }
 
-  return result;
+  return result
 }
 
 /**
@@ -60,9 +60,9 @@ export function toFormikValidate<T>(
   params?: Partial<z.ParseParams>
 ) {
   return async (values: T) => {
-    const result = await schema.safeParseAsync(values, params);
+    const result = await schema.safeParseAsync(values, params)
     if (!result.success) {
-      return createValidationResult(result.error);
+      return createValidationResult(result.error)
     }
-  };
+  }
 }
