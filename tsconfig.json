@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "Preserve",
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "allowJs": true,
+    "target": "es5",
+    "module": "commonjs",
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "declaration": true,
-    "esModuleInterop": true,
-    "skipDefaultLibCheck": true,
+    "outDir": "./dist",
     "rootDir": "./src",
-    "outDir": "./dist"
+    "lib": ["ES2019"],
+    "skipDefaultLibCheck": true
   },
   "include": ["./src"],
   "exclude": [
