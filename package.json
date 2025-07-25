@@ -1,6 +1,6 @@
 {
   "name": "zod-adapter-formik",
-  "version": "1.4.10",
+  "version": "2.0.0",
   "description": "An adapter of zod object validation to Formik validation schema",
   "main": "./dist/index.js",
   "exports": {
