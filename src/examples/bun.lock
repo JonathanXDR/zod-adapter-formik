@@ -7,8 +7,8 @@
         "formik": "2.4.6",
         "react": "19.1.0",
         "react-dom": "19.1.0",
-        "zod": "3.25.74",
-        "zod-adapter-formik": "1.4.8",
+        "zod": "4.0.10",
+        "zod-adapter-formik": "1.4.10",
       },
       "devDependencies": {
         "@types/react-dom": "19.1.6",
@@ -17,7 +17,7 @@
     },
   },
   "packages": {
-    "@types/hoist-non-react-statics": ["@types/hoist-non-react-statics@3.3.6", "", { "dependencies": { "@types/react": "*", "hoist-non-react-statics": "^3.3.0" } }, "sha512-lPByRJUer/iN/xa4qpyL0qmL11DqNW81iU/IG1S3uvRUq4oKagz8VCxZjiWkumgt66YT3vOdDgZ0o32sGKtCEw=="],
+    "@types/hoist-non-react-statics": ["@types/hoist-non-react-statics@3.3.7", "", { "dependencies": { "hoist-non-react-statics": "^3.3.0" }, "peerDependencies": { "@types/react": "*" } }, "sha512-PQTyIulDkIDro8P+IHbKCsw7U2xxBYflVzW/FgWdCAePD9xGSidgA76/GeJ6lBKoblyhf9pBY763gbrN+1dI8g=="],
 
     "@types/react": ["@types/react@19.1.8", "", { "dependencies": { "csstype": "^3.0.2" } }, "sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g=="],
 
@@ -51,8 +51,8 @@
 
     "typescript": ["typescript@5.8.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="],
 
-    "zod": ["zod@3.25.74", "", {}, "sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg=="],
+    "zod": ["zod@4.0.10", "", {}, "sha512-3vB+UU3/VmLL2lvwcY/4RV2i9z/YU0DTV/tDuYjrwmx5WeJ7hwy+rGEEx8glHp6Yxw7ibRbKSaIFBgReRPe5KA=="],
 
-    "zod-adapter-formik": ["zod-adapter-formik@1.4.8", "", { "peerDependencies": { "formik": "^2.2.9", "zod": "^3.22.4" } }, "sha512-goyXVLsjMCIXl3qZ+uj4HRpIrpn9dpuGKuJYbU5ts0eyZLr9IWzDQskigFpGlZIoYNXQpDtAS4QjWBScNdwoGQ=="],
+    "zod-adapter-formik": ["zod-adapter-formik@1.4.10", "", { "peerDependencies": { "formik": "^2.2.9", "zod": "^3.22.4" } }, "sha512-lQ6au7jkb7NIJNHZY9FxOKQf+WjiIAMzcMxSU2kcTBYSfZn70DpuTeku//nSw4S0p+ruqqOg53CoK63hAHbZSA=="],
   }
 }
