@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
-    "./v4": "./dist/v4/index.js"
+    "./v3": "./dist/v3/index.js"
   },
   "author": "Matheus Robert Lichtnow <matheusrobert8@gmail.com>",
   "contributors": [
