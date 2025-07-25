@@ -1,5 +1,5 @@
-import * as z from 'zod/v4'
-import { toFormikValidate, toFormikValidationSchema } from '../../v4/index'
+import { z } from 'zod/v3'
+import { toFormikValidate, toFormikValidationSchema } from '../../v3/index'
 
 describe('toFormikValidationSchema', () => {
   it('should pass validate without errors', async () => {
@@ -25,11 +25,11 @@ describe('toFormikValidationSchema', () => {
     error.inner = [
       {
         path: 'name',
-        message: 'Invalid input: expected string, received undefined',
+        message: 'Required',
       },
       {
         path: 'age',
-        message: 'Invalid input: expected number, received string',
+        message: 'Expected number, received string',
       },
     ]
 
@@ -59,8 +59,8 @@ describe('toFormikValidate', () => {
     const validate = toFormikValidate(schema)
 
     const error = {
-      name: 'Invalid input: expected string, received undefined',
-      age: 'Invalid input: expected number, received string',
+      name: 'Required',
+      age: 'Expected number, received string',
     }
 
     // when

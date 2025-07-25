@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import * as z from 'zod'
 
 export class ValidationError extends Error {
   public name = 'ValidationError'
@@ -10,11 +10,11 @@ export class ValidationError extends Error {
   }
 }
 
-function createValidationError(e: z.ZodError) {
-  const error = new ValidationError(e.message)
-  error.inner = e.errors.map((err) => ({
+function createValidationError(e: z.core.$ZodError) {
+  const error = new ValidationError(e.message || 'Validation failed')
+  error.inner = e.issues.map((err) => ({
     message: err.message,
-    path: err.path.join('.'),
+    path: err.path.map((key) => String(key)).join('.'),
   }))
 
   return error
@@ -26,24 +26,24 @@ function createValidationError(e: z.ZodError) {
  * @returns An object containing the `validate` method expected by Formik
  */
 export function toFormikValidationSchema<T>(
-  schema: z.ZodSchema<T>,
-  params?: Partial<z.ParseParams>
+  schema: z.ZodType<T>,
+  params?: Partial<z.core.$ParseAsync>
 ): { validate: (obj: T) => Promise<void> } {
   return {
     async validate(obj: T) {
       try {
         await schema.parseAsync(obj, params)
       } catch (err: unknown) {
-        throw createValidationError(err as z.ZodError<T>)
+        throw createValidationError(err as z.core.$ZodError)
       }
     },
   }
 }
 
-function createValidationResult(error: z.ZodError) {
+function createValidationResult(error: z.core.$ZodError) {
   const result: Record<string, string> = {}
 
-  for (const x of error.errors) {
+  for (const x of error.issues) {
     result[x.path.filter(Boolean).join('.')] = x.message
   }
 
@@ -56,8 +56,8 @@ function createValidationResult(error: z.ZodError) {
  * @returns An validate function as expected by Formik
  */
 export function toFormikValidate<T>(
-  schema: z.ZodSchema<T>,
-  params?: Partial<z.ParseParams>
+  schema: z.ZodType<T>,
+  params?: Partial<z.core.$ParseAsync>
 ) {
   return async (values: T) => {
     const result = await schema.safeParseAsync(values, params)

@@ -1,6 +1,5 @@
 import { Formik } from 'formik'
-import React from 'react'
-import { z } from 'zod'
+import * as z from 'zod'
 import { toFormikValidationSchema } from 'zod-adapter-formik'
 
 const Schema = z.object({
