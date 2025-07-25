@@ -1,6 +1,8 @@
 import { Formik } from 'formik'
+// use "zod/v3" if you are using zod v3
 import * as z from 'zod'
-import { toFormikValidationSchema } from 'zod-adapter-formik/v4'
+// use "zod-formik-adapter/v3" if you are using zod v3
+import { toFormikValidationSchema } from 'zod-adapter-formik'
 
 const Schema = z.object({
   name: z.string(),

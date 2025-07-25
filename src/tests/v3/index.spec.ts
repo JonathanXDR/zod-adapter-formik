@@ -1,5 +1,8 @@
+import {
+  toFormikValidate,
+  toFormikValidationSchema,
+} from 'zod-adapter-formik/v3'
 import { z } from 'zod/v3'
-import { toFormikValidate, toFormikValidationSchema } from '../../v3/index'
 
 describe('toFormikValidationSchema', () => {
   it('should pass validate without errors', async () => {

@@ -19,6 +19,7 @@ bun add zod-formik-adapter
 ## Usage
 
 ```TSX
+// use "zod/v3" if you are using zod v3
 import * as z from 'zod'
 import { Formik } from 'formik';
 // use "zod-formik-adapter/v3" if you are using zod v3

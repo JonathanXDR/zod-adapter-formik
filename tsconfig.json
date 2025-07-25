@@ -13,7 +13,8 @@
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "allowUmdGlobalAccess": true,
   },
   "include": ["./src"],
   "exclude": [
