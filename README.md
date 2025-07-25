@@ -19,9 +19,9 @@ bun add zod-formik-adapter
 ## Usage
 
 ```TSX
-import { z } from 'zod';
+import * as z from 'zod'
 import { Formik } from 'formik';
-// use "zod-formik-adapter/v4" if you are using zod v4
+// use "zod-formik-adapter/v3" if you are using zod v3
 import { toFormikValidationSchema } from 'zod-formik-adapter';
 
 const Schema = z.object({
@@ -39,7 +39,7 @@ const Component = () => (
 ```
 
 ```TSX
-import { z } from 'zod';
+import * as z from 'zod'
 import { Formik } from 'formik';
 import { toFormikValidate } from 'zod-formik-adapter';
 
